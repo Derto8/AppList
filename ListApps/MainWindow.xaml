@@ -1,0 +1,18 @@
+﻿<Window x:Class="ListApps.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListApps"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid Background="#FF553D3A">
+        <DataGrid AutoGenerateColumns="False" x:Name="dgApps" FontFamily="Arial" FontSize="16" Background="Wheat" Foreground="#FF553D3A" Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=CreationDate}" Header="CreationDate" Width="180" IsReadOnly="False"/>
+                <DataGridCheckBoxColumn Binding="{Binding Path=IsDone}" Header="Done" Width="50" IsReadOnly="False"/>
+                <DataGridTextColumn Binding="{Binding Path=Text}" Header="Task" Width="*" IsReadOnly="False"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
